@@ -10,7 +10,7 @@ const applicationRoutes = require('./applicationRoutes');
 const postedByRoutes = require('./postedByRoutes');
 const permissionRoutes = require('./permissionRoutes')
 const permissionRoleRoutes = require("./permissionRoleRoutes");
-A
+
 const router = express.Router();
 
 router.use('/api/teams', teamRoutes);
