@@ -1,4 +1,5 @@
 const { EntitySchema } = require('typeorm');
+const Role = require('./Role');
 
 module.exports = new EntitySchema({
     name: 'User',
@@ -11,30 +12,24 @@ module.exports = new EntitySchema({
         },
         username: {
             type: 'varchar',
-            nullable: true,
         },
         email: {
             type: 'varchar',
-            nullable: false,
             unique: true,
         },
         password: {
             type: 'varchar',
-            nullable: false,
         },
         full_name: {
             type: 'varchar',
-            nullable: false,
         },
     },
     relations: {
         role: {
-            type: 'many-to-one',
             target: 'Role',
-            default: 'member',
-            joinColumn: {
-                name: 'roleId'
-            }
-        }
-    }
+            type: 'many-to-one',
+            joinColumn: { name: 'roleId' }, // Foreign key column in User table
+            eager: true, // Load role automatically with user
+        },
+    },
 });

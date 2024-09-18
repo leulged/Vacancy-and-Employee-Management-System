@@ -60,10 +60,37 @@ const deleteUser = async (req, res) => {
     }
 };
 
+const getUserByEmail = async (req, res) => {
+    const { email } = req.params;  // Assuming email is passed in the URL as a parameter
+
+    try {
+        const user = await userService.findUserByEmail(email);
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Return user details along with the role
+        res.json({
+            id: user.id,
+            username: user.username,
+            email: user.email,
+            full_name: user.full_name,
+            role: user.role.name  // Returning the role name
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+
 module.exports = {
     getAllUsers,
     createUser,
     getUserById,
     updateUser,
     deleteUser,
+    getUserByEmail,
+
 };

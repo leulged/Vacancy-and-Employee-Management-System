@@ -1,20 +1,23 @@
+require('dotenv').config();
+
+console.log('JWT_SECRET:', process.env.JWT_SECRET);
+
 const express = require('express');
 const cors = require('cors');
-const AppDataSource = require('./Config/database'); // Adjust the path to your database.js file
-const allRoutes = require('./Routes/allRoutes'); // Import the allRoutes.js file
+const AppDataSource = require('./Config/database');
+const allRoutes = require('./Routes/allRoutes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Register the routes with your app
-app.use('/', allRoutes); // Add this line to use your routes
+app.use('/', allRoutes);
 
-// Initialize database connection
 AppDataSource.initialize()
     .then(async () => {
-        await AppDataSource.synchronize(); // Synchronize the schema with the database
+        await AppDataSource.synchronize();
         console.log('Data Source has been initialized and synchronized!');
+        console.log('Initializing AppDataSource:', AppDataSource.isInitialized);
 
         app.listen(3001, () => {
             console.log('Server is running on port 3001');

@@ -18,11 +18,5 @@ module.exports = new EntitySchema({
             nullable: true,
         },
     },
-    relations: {
-        users: {
-            type: 'one-to-many',
-            target: 'User',
-            inverseSide: 'role' // This must match the property name in the User model
-        }
-    }
+    
 });

@@ -13,9 +13,6 @@ const getAllRoles = async () => {
     return await roleRepository.find();
 };
 
-const getRoleById = async (id) => {
-    return await roleRepository.findOneBy({ id });
-};
 
 const updateRole = async (id, name, description) => {
     const role = await roleRepository.findOneBy({ id });
@@ -39,7 +36,7 @@ const deleteRole = async (id) => {
 module.exports = {
     createRole,
     getAllRoles,
-    getRoleById,
+    
     updateRole,
     deleteRole,
 };

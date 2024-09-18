@@ -37,7 +37,13 @@ module.exports = new EntitySchema({
             type: 'uuid',
             nullable: true,
         },
+        status: {
+            type: 'enum',
+            enum: ['accepted' , 'pending'],
+            default: 'pending',
+        },
     },
+
     relations: {
         category: {
             type: 'many-to-one',

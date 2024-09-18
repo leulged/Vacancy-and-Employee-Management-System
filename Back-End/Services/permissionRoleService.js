@@ -10,8 +10,12 @@ const assignPermissionToRole = async (permissionId, roleId) => {
 
 const getAllPermissionsForRole = async (roleId) => {
     const permissionRoleRepository = AppDataSource.getRepository(PermissionRole);
-    return await permissionRoleRepository.find({ where: { role: { id: roleId } }, relations: ["permission"] });
+    return await permissionRoleRepository.find({
+        where: { role: { id: roleId } },
+        relations: ["permission"],
+    });
 };
+
 
 const removePermissionFromRole = async (permissionId, roleId) => {
     const permissionRoleRepository = AppDataSource.getRepository(PermissionRole);

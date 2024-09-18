@@ -91,6 +91,12 @@ const deleteUser = async (id) => {
     }
     return null;
 };
+const findUserByEmail = async (email) => {
+    return await userRepository.findOne({
+        where: { email },
+        relations: ['role'],  // Make sure to load related role
+    });
+};
 
 module.exports = {
     createUser,
@@ -98,4 +104,5 @@ module.exports = {
     getUserById,
     updateUser,
     deleteUser,
+    findUserByEmail
 };

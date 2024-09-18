@@ -1,74 +1,64 @@
-// controllers/roleController.js
+const { AppDataSource } = require('../Config/database');
+const Role = require('../Models/Role');
 const roleService = require('../Services/roleService');
 
-const getAllRoles = async (req, res) => {
+const createRole = async (req, res) => {
+    const { name, description } = req.body;
+
+    try {
+        const newRole = await roleService.createRole(name, description);
+        return res.status(201).json(newRole);
+    } catch (error) {
+        console.error('Error creating role:', error); // Log the error
+        return res.status(500).json({ message: 'Error creating role', error });
+    }
+};
+
+// Update Role
+const updateRole = async (req, res) => {
+    const { id } = req.params;
+    const { name, description } = req.body;
+
+    try {
+        const updatedRole = await roleService.updateRole(id, name, description);
+        if (!updatedRole) {
+            return res.status(404).json({ message: 'Role not found' });
+        }
+        return res.status(200).json(updatedRole);
+    } catch (error) {
+        console.error('Error updating role:', error); // Log the error
+        return res.status(500).json({ message: 'Error updating role', error });
+    }
+};
+
+// Delete Role
+const deleteRole = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const deletedRole = await roleService.deleteRole(id);
+        if (!deletedRole) {
+            return res.status(404).json({ message: 'Role not found' });
+        }
+        return res.status(204).send(); // Role successfully deleted, no content to return
+    } catch (error) {
+        console.error('Error deleting role:', error); // Log the error
+        return res.status(500).json({ message: 'Error deleting role', error });
+    }
+};
+
+// Get All Roles
+const getRoles = async (req, res) => {
     try {
         const roles = await roleService.getAllRoles();
-        res.json(roles);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to retrieve roles' });
-    }
-};
-
-const getRoleById = async (req, res) => {
-    try {
-        const role = await roleService.getRoleById(req.params.id);
-        if (role) {
-            res.json(role);
-        } else {
-            res.status(404).json({ error: 'Role not found' });
+        if (!roles || roles.length === 0) {
+            return res.status(404).json({ message: 'No roles found' });
         }
+        return res.json(roles);
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to retrieve role' });
+        console.error('Error fetching roles:', error);
+        return res.status(500).json({ message: 'Error fetching roles', error });
     }
 };
 
-const createRole = async (req, res) => {
-    try {
-        const { name, description } = req.body;
-        const newRole = await roleService.createRole(name, description);
-        res.status(201).json(newRole);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to create role' });
-    }
-};
-
-const updateRole = async (req, res) => {
-    try {
-        const { name, description } = req.body;
-        const updatedRole = await roleService.updateRole(req.params.id, name, description);
-        if (updatedRole) {
-            res.json(updatedRole);
-        } else {
-            res.status(404).json({ error: 'Role not found' });
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to update role' });
-    }
-};
-
-const deleteRole = async (req, res) => {
-    try {
-        const deletedRole = await roleService.deleteRole(req.params.id);
-        if (deletedRole) {
-            res.json(deletedRole);
-        } else {
-            res.status(404).json({ error: 'Role not found' });
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to delete role' });
-    }
-};
-
-module.exports = {
-    getAllRoles,
-    getRoleById,
-    createRole,
-    updateRole,
-    deleteRole,
-};
+module.exports = { createRole, updateRole, deleteRole, getRoles };
