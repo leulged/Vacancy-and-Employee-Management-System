@@ -4,7 +4,7 @@ const { verifyToken, authorizeRole } = require('../Middleware/authMiddleware');
 
 const router = express.Router();
 
-router.get('/', verifyToken, authorizeRole('Manager'), userController.getAllUsers);
+router.get('/',  userController.getAllUsers);
 router.post('/',  verifyToken, authorizeRole('Manager'), userController.createUser);
 router.get('/:id', verifyToken, authorizeRole('Manager'), userController.getUserById);
 router.put('/:id', verifyToken, authorizeRole('Manager'), userController.updateUser);

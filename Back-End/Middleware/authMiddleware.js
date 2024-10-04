@@ -41,21 +41,21 @@ const verifyToken = async (req, res, next) => {
     }
 };
 
-const authorizeRole = (requiredRole) => {
+const authorizeRole = (...allowedRoles) => {
     return (req, res, next) => {
         console.log('User role from token:', req.user.role.name);
-        console.log('Required role:', requiredRole);
+        console.log('Allowed roles:', allowedRoles);
 
         if (!req.user || !req.user.role) {
             return res.status(403).json({ message: 'Access Denied. No role information found.' });
         }
 
-        // Check if the user's role matches the required role
-        if (req.user.role.name !== requiredRole) {
-            return res.status(403).json({ message: `Access Denied. Requires ${requiredRole} role.` });
+        // Check if the user's role is included in the allowed roles
+        if (!allowedRoles.includes(req.user.role.name)) {
+            return res.status(403).json({ message: `Access Denied. Requires one of these roles: ${allowedRoles.join(', ')}` });
         }
 
-        next(); // Proceed if the user's role matches the required role
+        next(); // Proceed if the user's role matches one of the allowed roles
     };
 };
 
