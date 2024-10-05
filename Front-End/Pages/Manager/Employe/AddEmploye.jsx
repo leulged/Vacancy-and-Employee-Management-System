@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 
@@ -11,22 +10,10 @@ function AddEmployee() {
     password: "",
     team: "",
     
-
-import React, { useState } from 'react';
-import axios from 'axios';
-
-function AddEmployee() {
-  const [values, setValues] = useState({
-    full_name: '',
-    username: '',
-    email: '',
-    password: '',
->>>>>>> b1165d3d (first commit)
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-<<<<<<< HEAD
     console.log("Form values:", values);
     axios
       .post("http://localhost:3001/api/users", values)
@@ -61,26 +48,6 @@ function AddEmployee() {
       fetchTeams();
     }, []);
 
-=======
-    console.log("Form values:", values); 
-    axios.post('http://localhost:3001/api/users', values)
-      .then(result => {
-        console.log(result);
-        // Clear the form fields by resetting the state to the initial empty values
-        setValues({
-          full_name: '',
-          username: '',
-          email: '',
-          password: '',
-        });
-      })
-      .catch(err => {
-        console.error('Error saving data:', err);
-      });
-  };
-
-      
->>>>>>> b1165d3d (first commit)
   return (
     <div>
       <div className="border border-gray-200 rounded-3xl p-4 m-4 w-1/2 mx-auto">
@@ -150,7 +117,6 @@ function AddEmployee() {
               className="w-full px-3 py-1 border rounded"
             />
           </div>
-<<<<<<< HEAD
           <div className="mb-2">
             <label className="block text-base mb-2 text-left text-gray-700">
               Team:
@@ -173,8 +139,6 @@ function AddEmployee() {
             </select>
           </div>
 
-=======
->>>>>>> b1165d3d (first commit)
           <button
             type="submit"
             className="mt-4 w-200 py-2 px-14 bg-blue-500 text-white rounded hover:bg-blue-600"

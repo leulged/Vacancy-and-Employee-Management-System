@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
-=======
-
-import React, { useState } from "react";
-import { FiSearch } from "react-icons/fi";
-// import IElogo from './assets/IElogo.png';
->>>>>>> b1165d3d (first commit)
 
 function MainPage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +9,7 @@ function MainPage() {
     setIsOpen(!isOpen);
   };
   return (
-<<<<<<< HEAD
     <div>
-=======
-    <div >
->>>>>>> b1165d3d (first commit)
       <header className="bg-white shadow-md p-4">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
@@ -125,14 +114,10 @@ function MainPage() {
       </header>
 
       {/* home page */}
-<<<<<<< HEAD
       <div
         id="home"
         className="flex flex-col mt-6 md:flex-row items-center justify-center md:space-x-4 ml-10"
       >
-=======
-      <div id="home" className="flex flex-col mt-6 md:flex-row items-center justify-center md:space-x-4 ml-10">
->>>>>>> b1165d3d (first commit)
         <div className="flex-1 m-4">
           <img
             src="./assets/IE_jobpost_pic.jpg"
@@ -149,11 +134,6 @@ function MainPage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> b1165d3d (first commit)
       {/* job post page */}
       <div id="jobs" className="my-16 container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -168,18 +148,12 @@ function MainPage() {
               <button className="w-26 py-1 px-4 text-white rounded bg-green-600 hover:bg-green-700">
                 More
               </button>
-<<<<<<< HEAD
               <Link
                 to="/ApplyForm"
                 className="w-26 py-2 px-4 text-white rounded bg-blue-600 hover:bg-blue-700"
               >
                 Apply
               </Link>
-=======
-              <button className="w-26 py-2 px-4 text-white rounded bg-blue-600 hover:bg-blue-700">
-                Apply
-              </button>
->>>>>>> b1165d3d (first commit)
             </div>
           </div>
 
@@ -238,14 +212,10 @@ function MainPage() {
       {/* about us page */}
 
       <div>
-<<<<<<< HEAD
         <div
           id="about-us"
           className="flex flex-col md:flex-row items-center p-8 ml-10"
         >
-=======
-        <div id="about-us" className="flex flex-col md:flex-row items-center p-8 ml-10">
->>>>>>> b1165d3d (first commit)
           <div className="flex-1 p-4">
             <h1 className="text-4xl font-bold mb-4">15+ YEARS</h1>
             <h2 className="text-4xl font-bold mb-6">of EXPERIENCE in the </h2>
@@ -253,7 +223,6 @@ function MainPage() {
           </div>
           <div className="flex-1 p-4">
             <p className="text-base leading-7 font-bold">
-<<<<<<< HEAD
               IE Networks is a fully Ethiopian owned Company that focuses on
               value maximizing and is a service oriented solution provider,
               established in December 2008.
@@ -262,12 +231,6 @@ function MainPage() {
               We have been involved exclusively in the areas ranging from
               enterprise network services and business automation intelligence
               to smart infrastructure and cloud services.
-=======
-              IE Networks is a fully Ethiopian owned Company that focuses on value maximizing and is a service oriented solution provider, established in December 2008.
-            </p>
-            <p className="text-base leading-7 font-bold mt-4">
-              We have been involved exclusively in the areas ranging from enterprise network services and business automation intelligence to smart infrastructure and cloud services.
->>>>>>> b1165d3d (first commit)
             </p>
           </div>
         </div>
@@ -275,14 +238,10 @@ function MainPage() {
 
       {/* contact us page */}
 
-<<<<<<< HEAD
       <div
         id="contact-us"
         className="container mx-auto p-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8"
       >
-=======
-      <div id="contact-us" className="container mx-auto p-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
->>>>>>> b1165d3d (first commit)
         {/* Left Side: Contact Information */}
         <div className="w-full md:w-1/2 ml-10 space-y-2">
           <h2 className="text-2xl font-bold mb-4 shadow">Office Address</h2>
@@ -342,8 +301,4 @@ function MainPage() {
   );
 }
 
-<<<<<<< HEAD
 export default MainPage;
-=======
-export default MainPage;
->>>>>>> b1165d3d (first commit)

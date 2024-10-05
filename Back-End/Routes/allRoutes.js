@@ -1,4 +1,5 @@
 const express = require('express');
+
 const teamRoutes = require('./teamRoutes');
 const userRoutes = require('./userRoutes');
 const roleRoutes = require('./roleRoutes');
@@ -9,7 +10,6 @@ const applicationRoutes = require('./applicationRoutes');
 const postedByRoutes = require('./postedByRoutes');
 const permissionRoutes = require('./permissionRoutes')
 const permissionRoleRoutes = require("./permissionRoleRoutes");
-const authRoutes = require('./authRoutes'); // Path to auth routes
 
 const router = express.Router();
 

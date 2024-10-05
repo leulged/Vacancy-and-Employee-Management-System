@@ -29,7 +29,6 @@ function ManagerPage() {
               <li className="mt-2 h-8 w-28  hover:bg-slate-400 rounded">
                 <Link to="/ManageEmployee">Employee</Link>
               </li>
-<<<<<<< HEAD
               <li className="mt-2  h-8 w-28 hover:bg-slate-400 rounded">
                     <Link to="/Criteria">Criteria</Link>
                   </li>
@@ -42,8 +41,6 @@ function ManagerPage() {
                   <li className="mt-2 h-8 w-28 hover:bg-slate-400 rounded">
                     <Link to="/ApplicantList">Applicant List</Link>
                   </li>
-=======
->>>>>>> b1165d3d (first commit)
             </ul>
           </div>
         </div>

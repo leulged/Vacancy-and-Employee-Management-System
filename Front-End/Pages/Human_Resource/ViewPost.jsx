@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {useState, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 
@@ -46,35 +45,3 @@ function ViewPost() {
 }
 
 export default ViewPost;
-=======
-import React from 'react'
-
-function ViewPost() {
-    return (
-    <div className="flex w-screen ">
-    <div className="border rounded-xl w-auto min-w-56 mx-5 p-3">
-      <p>Title: Mernstack Developer </p>
-      <p>Education Level: Degree</p>
-      <p>Profesional Skill(in years): 2</p>
-      <p>Required Employee: 10</p>
-      <div className="flex">
-        <p>Gender: Both</p>
-        <button className="mb-3 mt-1 ml-4 w-20 pb-1 px-5 bg-green-600 text-white rounded hover:bg-green-700 ">
-          more
-        </button>
-      </div>
-      <div className="border p-2 pl-6 shadow rounded">
-        <button className=" bg-red-500 mr-6 text-white rounded px-4 hover:bg-red-800">
-          Edit
-        </button>
-        <button className="bg-blue-500 mr-2 text-white rounded px-4 hover:bg-blue-700 ">
-          Post
-        </button>
-      </div>
-    </div>
-  </div>
-);
-}
-
-export default ViewPost
->>>>>>> b1165d3d (first commit)

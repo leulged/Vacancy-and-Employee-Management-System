@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
@@ -76,33 +75,6 @@ function CriteriaView() {
           </div>
         </div>
       ))}
-=======
-import React from "react";
-
-function CriteriaView() {
-  return (
-    <div className="flex w-screen ">
-      <div className="border rounded-xl w-auto min-w-56 mx-5 p-3">
-        <p>Title: Mernstack Developer </p>
-        <p>Education Level: Degree</p>
-        <p>Profesional Skill(in years): 2</p>
-        <p>Required Employee: 10</p>
-        <div className="flex">
-          <p>Gender: Both</p>
-          <button className="mb-3 mt-1 ml-4 w-20 pb-1 px-5 bg-green-600 text-white rounded hover:bg-green-700 ">
-            more
-          </button>
-        </div>
-        <div className="border p-2 shadow rounded">
-          <button className=" bg-red-500 mr-2 text-white rounded px-2 hover:bg-red-800">
-            Declined
-          </button>
-          <button className="bg-blue-500 mr-2 text-white rounded px-2 hover:bg-blue-700 ">
-            Accepted
-          </button>
-        </div>
-      </div>
->>>>>>> b1165d3d (first commit)
     </div>
   );
 }

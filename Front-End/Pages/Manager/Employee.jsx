@@ -111,11 +111,7 @@ function Employee() {
                 <td className="py-2 px-4 border-b">{employee.full_name}</td>
                 <td className="py-2 px-4 border-b">{employee.username}</td>
                 <td className="py-2 px-4 border-b">{employee.email}</td>
-<<<<<<< HEAD
                 {/* <td className="py-2 px-4 border-b">{employee.team}</td> */}
-=======
-                <td className="py-2 px-4 border-b">{employee.team}</td>
->>>>>>> b1165d3d (first commit)
                 <td className="py-2 px-4 border-b">
                   <button
                     type="button"

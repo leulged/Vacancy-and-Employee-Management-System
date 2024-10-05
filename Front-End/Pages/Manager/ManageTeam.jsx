@@ -7,21 +7,13 @@ import { Link } from "react-router-dom";
 function ManageTeam() {
   const [teams, setTeams] = useState([]);
   const [showAddPopup, setShowAddPopup] = useState(false);
-<<<<<<< HEAD
   const [loading, setLoading] = useState(true); 
-=======
-  const [loading, setLoading] = useState(true); // State to manage loading state
->>>>>>> b1165d3d (first commit)
   const [error, setError] = useState(null);
   
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-<<<<<<< HEAD
         const response = await axios.get('http://localhost:3001/api/teams'); 
-=======
-        const response = await axios.get('http://localhost:3001/api/teams'); // Replace with your API URL
->>>>>>> b1165d3d (first commit)
         setTeams(response.data); // Update state with the fetched data
       } catch (err) {
         setError(err.message); // Set error message if something goes wrong
@@ -33,30 +25,18 @@ function ManageTeam() {
     fetchTeams();
   }, []);
 
-<<<<<<< HEAD
   if (loading) return <p>Loading...</p>; 
-=======
-  if (loading) return <p>Loading...</p>; // Show a loading message while data is being fetched
->>>>>>> b1165d3d (first commit)
   if (error) return <p>Error: {error}</p>;
 
   function deleteTeam(id) {
     axios
-<<<<<<< HEAD
       .delete(`http://localhost:3001/api/teams/${id}`)
-=======
-      .delete(`http://localhost:3001/api/teams/${id}`)// Use template literals correctly
->>>>>>> b1165d3d (first commit)
       .then(() => {
         alert('Team has been deleted');
         setTeams((prevTeams) => prevTeams.filter((team) => team.id !== id)); // Remove the deleted team from state
       })
       .catch((err) => {
-<<<<<<< HEAD
         alert(`Error deleting team: ${err.message}`); 
-=======
-        alert(`Error deleting team: ${err.message}`); // Handle error if deletion fails
->>>>>>> b1165d3d (first commit)
       });
   }
   return (
