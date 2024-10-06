@@ -17,46 +17,46 @@ This project is aimed at simplifying the recruitment workflow for both HR profes
 
 Below are some screenshots showcasing various pages of the Vacancy and Employment Management System:
 
-![About Page](./Front-End/Pages/assets/about.jpg)
+![About Page](./Front-End/assets/about.jpg)
 *About Page*
 
-![Add Employee Page](./Front-End/Pages/assets/add-employee.jpg)
+![Add Employee Page](./Front-End/assets/add-employee.jpg)
 *Add Employee Interface*
 
-![Add Team Page](./Front-End/Pages/assets/add-team.jpg)
+![Add Team Page](./Front-End/assets/add-team.jpg)
 *Add Team Interface*
 
-![Admin Criteria Page](./Front-End/Pages/assets/admin-criteria.jpg)
+![Admin Criteria Page](./Front-End/assets/admin-criteria.jpg)
 *Admin Criteria Interface*
 
-![Applicants Page](./Front-End/Pages/assets/applicants.jpg)
+![Applicants Page](./Front-End/assets/applicants.jpg)
 *Applicants Tracking Interface*
 
-![Apply Form Page](./Front-End/Pages/assets/apply-form.jpg)
+![Apply Form Page](./Front-End/assets/apply-form.jpg)
 *Job Application Form Interface*
 
-![Contact Info Page](./Front-End/Pages/assets/contact-info.jpg)
+![Contact Info Page](./Front-End/assets/contact-info.jpg)
 *Contact Information Interface*
 
-![Create Criteria Page](./Front-End/Pages/assets/create-criteria.jpg)
+![Create Criteria Page](./Front-End/assets/create-criteria.jpg)
 *Create Criteria Interface*
 
-![Criteria Page](./Front-End/Pages/assets/criteria.jpg)
+![Criteria Page](./Front-End/assets/criteria.jpg)
 *Criteria Management Interface*
 
-![Dashboard Page](./Front-End/Pages/assets/dashboard.jpg)
+![Dashboard Page](./Front-End/assets/dashboard.jpg)
 *Dashboard Overview*
 
-![Employee Info Page](./Front-End/Pages/assets/employee-info.jpg)
+![Employee Info Page](./Front-End/assets/employee-info.jpg)
 *Employee Information Interface*
 
-![Home Page](./Front-End/Pages/assets/home-page.jpg)
+![Home Page](./Front-End/assets/home-page.jpg)
 *Home Page Overview*
 
-![Job Listing Page](./Front-End/Pages/assets/job-listing.jpg)
+![Job Listing Page](./Front-End/assets/job-listing.jpg)
 *Job Listings Interface*
 
-![Team and Role Page](./Front-End/Pages/assets/team-and-role.jpg)
+![Team and Role Page](./Front-End/assets/team-and-role.jpg)
 *Team and Role Management Interface*
 
 ## Technologies Used
